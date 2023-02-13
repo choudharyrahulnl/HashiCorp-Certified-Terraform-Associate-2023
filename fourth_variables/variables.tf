@@ -22,3 +22,5 @@ variable "instance_type_2" {
 variable "instance_type_3" {
   type = list(string)
 }
+
+variable "isDev" {}
