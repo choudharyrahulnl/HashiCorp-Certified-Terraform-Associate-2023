@@ -4,6 +4,6 @@ terraform {
     bucket = "tf-bucket-2205"
     key    = "tf-state/terraform.tfstate"
     region = "eu-central-1"
-    dynamodb_table = "tf-state-lock"
+    # dynamodb_table = "tf-state-lock"
   }
 }
