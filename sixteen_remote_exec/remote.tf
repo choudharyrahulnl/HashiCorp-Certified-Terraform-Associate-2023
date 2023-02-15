@@ -38,6 +38,7 @@ resource "aws_instance" "ec2" {
 
   provisioner "remote-exec" {
     when   = create
+    on_failure = fail
     inline = [
       "sudo yum -y install nano"
     ]
@@ -45,6 +46,7 @@ resource "aws_instance" "ec2" {
 
   provisioner "remote-exec" {
     when   = destroy
+    on_failure = continue
     inline = [
       "sudo yum -y remove nano"
     ]
