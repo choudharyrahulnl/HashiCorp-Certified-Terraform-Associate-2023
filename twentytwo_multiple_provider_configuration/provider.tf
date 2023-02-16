@@ -15,8 +15,9 @@ provider "aws" {
 }
 
 provider "aws" {
-  alias = "mumbai"
+  alias = "mumbai" # alias is used to deploy in multiple regions
   region     = "ap-south-1"
+  profile = "Personal" # /Users/taachra0/.aws & vi credentials. Profile is used to deploy in multiple accounts
   access_key = var.ACCESS_KEY
   secret_key = var.SECRET_KEY
 }
